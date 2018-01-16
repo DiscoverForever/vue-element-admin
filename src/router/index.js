@@ -39,18 +39,18 @@ export const constantRouterMap = [
       name: 'dashboard',
       meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
     }]
-  },
-  {
-    path: '/documentation',
-    component: Layout,
-    redirect: '/documentation/index',
-    children: [{
-      path: 'index',
-      component: _import('documentation/index'),
-      name: 'documentation',
-      meta: { title: 'documentation', icon: 'documentation', noCache: true }
-    }]
   }
+  // {
+  //   path: '/documentation',
+  //   component: Layout,
+  //   redirect: '/documentation/index',
+  //   children: [{
+  //     path: 'index',
+  //     component: _import('documentation/index'),
+  //     name: 'documentation',
+  //     meta: { title: 'documentation', icon: 'documentation', noCache: true }
+  //   }]
+  // }
 ]
 
 export default new Router({
@@ -107,7 +107,7 @@ export const asyncRouterMap = [
       { path: 'dropzone', component: _import('components-demo/dropzone'), name: 'dropzone-demo', meta: { title: 'dropzone' }},
       { path: 'sticky', component: _import('components-demo/sticky'), name: 'sticky-demo', meta: { title: 'sticky' }},
       { path: 'count-to', component: _import('components-demo/countTo'), name: 'countTo-demo', meta: { title: 'countTo' }},
-      { path: 'mixin', component: _import('components-demo/mixin'), name: 'componentMixin-demo', meta: { title: 'componentMixin' }},
+      // { path: 'mixin', component: _import('components-demo/mixin'), name: 'componentMixin-demo', meta: { title: 'componentMixin' }},
       { path: 'back-to-top', component: _import('components-demo/backToTop'), name: 'backToTop-demo', meta: { title: 'backToTop' }}
     ]
   },
@@ -225,12 +225,12 @@ export const asyncRouterMap = [
     children: [{ path: 'index', component: _import('theme/index'), name: 'theme', meta: { title: 'theme', icon: 'theme' }}]
   },
 
-  {
-    path: '/clipboard',
-    component: Layout,
-    redirect: 'noredirect',
-    children: [{ path: 'index', component: _import('clipboard/index'), name: 'clipboardDemo', meta: { title: 'clipboardDemo', icon: 'clipboard' }}]
-  },
+  // {
+  //   path: '/clipboard',
+  //   component: Layout,
+  //   redirect: 'noredirect',
+  //   children: [{ path: 'index', component: _import('clipboard/index'), name: 'clipboardDemo', meta: { title: 'clipboardDemo', icon: 'clipboard' }}]
+  // },
 
   {
     path: '/i18n',
