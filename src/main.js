@@ -1,5 +1,6 @@
 import Vue from 'vue'
-
+import AV from 'leancloud-storage'
+import config from './config';
 import 'normalize.css/normalize.css'// A modern alternative to CSS resets
 
 import Element from 'element-ui'
@@ -18,6 +19,12 @@ import './permission' // permission control
 import './mock' // simulation data
 
 import * as filters from './filters' // global filters
+
+/** init leancloud sdk */
+AV.init({
+  appId: config.leancloud_app_id,
+  appKey: config.leancloud_app_key
+});
 
 Vue.use(Element, {
   size: 'medium', // set element-ui default size
